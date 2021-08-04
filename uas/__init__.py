@@ -27,15 +27,15 @@ def _os(macos) -> str:
 def chrome() -> str:
     version = choice(
         (
-            "84.0.4147",
-            "85.0.4183",
             "86.0.4240",
             "87.0.4280",
             "88.0.4324",
             "89.0.4389",
             "90.0.4430",
+            "91.0.4472",
+            "92.0.4515"
         )
-    )
+    )  # use last 7 stable
     sub = randint(7, 212)
     macos = f"10_{randint(13, 15)}_{randint(0, 6)}"
     return f"Mozilla/5.0 ({_os(macos)}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{version}.{sub} Safari/537.36"
@@ -43,7 +43,7 @@ def chrome() -> str:
 
 # https://www.mozilla.org/en-US/firefox/releases/
 def firefox():
-    version = f"{randint(81, 88)}.{choice(['0', '0.1', '0.2', '0.3'])}"
+    version = f"{randint(84, 90)}.{choice(['0', '0.1', '0.2', '0.3'])}"  # use last 7 major
     macos = f"10.{randint(13, 15)}"
     return f"Mozilla/5.0 ({_os(macos)}; rv:{version}) Gecko/20100101 Firefox/{version}"
 

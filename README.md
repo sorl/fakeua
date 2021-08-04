@@ -1,5 +1,11 @@
 # uas
 
+## Description
+This fake user agent generator does not use any external data. Instead it
+randomizes browser versions for Firefox, Chrome and OS versions for MacOS,
+Windows. `uas` also contains some static user agents for bots from Facebook,
+Google and Bing.
+
 ## Installation
 
 `pip install uas`
